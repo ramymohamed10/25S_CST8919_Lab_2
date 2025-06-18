@@ -1,11 +1,26 @@
-### Successful Login
-POST http://<YOUR_WEBAPP_URL>/login
-Content-Type: application/x-www-form-urlencoded
+### Successful login
+POST https://flask-lab-iman123.azurewebsites.net/login
+Content-Type: application/json
 
-username=admin&password=password123
+{
+  "username": "admin",
+  "password": "correct_password"
+}
 
-### Failed Login
-POST http://<YOUR_WEBAPP_URL>/login
-Content-Type: application/x-www-form-urlencoded
+### Failed login #1
+POST https://flask-lab-iman123.azurewebsites.net/login
+Content-Type: application/json
 
-username=admin&password=wrongpass
+{
+  "username": "admin",
+  "password": "wrong1"
+}
+
+### Failed login #2
+POST https://flask-lab-iman123.azurewebsites.net/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "wrong2"
+}
